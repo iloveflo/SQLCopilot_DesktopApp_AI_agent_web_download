@@ -11,12 +11,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./index.css" />
   </head>
   <body>
+    <!-- Ambient glowing orbs in the background -->
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+    
     <div class="site-shell">
       <header class="topbar">
         <a class="brand" href="#top">
@@ -43,16 +48,19 @@
       <main id="top">
         <section class="hero">
           <div class="hero-copy">
-            <p class="eyebrow">SQL Copilot Pro AI</p>
+            <p class="eyebrow">Trợ lý CSDL AI Cao Cấp</p>
             <h1>Biến câu hỏi tiếng Việt thành truy vấn SQL có kiểm soát.</h1>
             <p class="hero-lead">
-              Một desktop app dành cho phân tích dữ liệu: kết nối MySQL, đọc schema,
-              đề xuất kế hoạch truy vấn, sinh SQL, thực thi an toàn và dựng biểu đồ
-              chỉ trong một luồng làm việc mạch lạc.
+              Nền tảng Desktop AI đa tác tử dành cho phân tích dữ liệu: đọc schema,
+              đề xuất chiến lược truy vấn thông minh, sinh SQL và trực quan hóa kết quả
+              ngay lập tức với sự can thiệp chủ động của con người.
             </p>
 
             <div class="hero-actions">
-              <a class="btn btn-primary" href="#downloads">Tải bản mới nhất</a>
+              <a class="btn btn-primary" href="#downloads">
+                <span class="btn-glow"></span>
+                <span class="btn-text">Tải bản trải nghiệm</span>
+              </a>
               <a
                 class="btn btn-secondary"
                 href="https://github.com/iloveflo/SQLCopilot_DesktopApp_AI_agent"
@@ -63,53 +71,54 @@
               </a>
             </div>
 
-            <div class="hero-metrics">
+            <div class="hero-metrics glass-panel">
               <article>
-                <strong>HITL</strong>
-                <span>Duyệt plan trước khi chạy SQL</span>
+                <strong>HITL (Kiểm Soát)</strong>
+                <span>Duyệt kế hoạch, mã SQL rõ ràng</span>
               </article>
               <article>
-                <strong>Cross-DB</strong>
-                <span>Phân tích nhiều database cùng lúc</span>
+                <strong>Multi-Agent AI</strong>
+                <span>Hệ sinh thái LangGraph & Gemini</span>
               </article>
               <article>
-                <strong>Desktop</strong>
-                <span>Windows, macOS, Linux</span>
+                <strong>Cross-Platform</strong>
+                <span>Kiến trúc phân tán Rust & Tauri</span>
               </article>
             </div>
           </div>
 
           <div class="hero-panel">
-            <div class="mock-window">
+            <div class="mock-window glass-panel-strong glow-border">
               <div class="mock-toolbar">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="close"></span>
+                <span class="min"></span>
+                <span class="max"></span>
               </div>
               <div class="mock-grid">
                 <aside class="mock-sidebar">
-                  <p class="mock-label">Sessions</p>
-                  <div class="mock-chip active">Doanh thu theo tháng</div>
+                  <p class="mock-label">Local Memory DB</p>
+                  <div class="mock-chip active">Doanh thu đa hệ thống</div>
+                  <div class="mock-chip">Sơ đồ dòng tiền quý</div>
                   <div class="mock-chip">Top khách hàng VIP</div>
-                  <div class="mock-chip">Tỷ lệ churn quý này</div>
                 </aside>
-                <section class="mock-chat">
+                <section class="mock-chat glass-panel-inner">
                   <div class="mock-bubble user">
-                    Hãy so sánh doanh thu giữa 2 database bán lẻ trong 6 tháng gần nhất.
+                    Hãy so sánh doanh thu của 2 cơ sở dữ liệu eCommerce từ đầu tháng.
                   </div>
                   <div class="mock-bubble ai">
-                    Tôi đã đọc schema, lập kế hoạch query và chuẩn bị biểu đồ xu hướng.
+                    <span class="ai-glimmer"></span>
+                    Reader Agent đã phân tích dữ liệu. Plan: Tiến hành UNION ALL các chi nhánh.
                   </div>
                   <div class="mock-sql">
-                    <span>SELECT</span> month, revenue, region <span>FROM</span> retail_a.orders
-                    <span>UNION ALL</span> ...
+                    <span>SELECT</span> DATE_FORMAT(date, '%m'), SUM(revenue) <span>FROM</span> db_a.sales
+                    <br><span>UNION ALL</span> ...
                   </div>
                   <div class="mock-chart">
                     <div class="bar tall"></div>
                     <div class="bar mid"></div>
                     <div class="bar low"></div>
                     <div class="bar taller"></div>
-                    <div class="bar mid"></div>
+                    <div class="bar super-tall glow-bar"></div>
                     <div class="bar high"></div>
                   </div>
                 </section>
@@ -120,51 +129,51 @@
 
         <section class="feature-section" id="features">
           <div class="section-heading">
-            <p class="eyebrow">Điểm nổi bật</p>
-            <h2>Không chỉ là chatbot SQL. Đây là một workflow dữ liệu hoàn chỉnh.</h2>
+            <p class="eyebrow">Tính Năng Đột Phá</p>
+            <h2>Vượt xa Chatbot, đây là kiến trúc Workflow Dữ Liệu Khép Kín.</h2>
           </div>
 
           <div class="feature-grid">
-            <article class="feature-card">
-              <h3>Natural Language to SQL</h3>
+            <article class="feature-card glass-panel hover-lift">
+              <div class="feature-icon">🧠</div>
+              <h3>Trí Tuệ Đa Tác Tử</h3>
               <p>
-                Đặt câu hỏi bằng tiếng Việt, để hệ thống đọc schema, hiểu ngữ cảnh và
-                tạo truy vấn phù hợp thay vì bắt bạn viết SQL từ đầu.
+                Reader, Planner, Coder & Visualizer được phân chia minh bạch trong LangGraph, giảm thiểu tối đa hiện tượng ảo giác AI.
               </p>
             </article>
-            <article class="feature-card">
-              <h3>Plan Approval</h3>
+            <article class="feature-card glass-panel hover-lift">
+              <div class="feature-icon">🛡️</div>
+              <h3>Human-in-the-Loop</h3>
               <p>
-                Mỗi truy vấn có thể đi qua bước xem trước kế hoạch, giúp giảm rủi ro
-                chạy sai ý hoặc thao tác nhầm trên dữ liệu thực tế.
+                Rủi ro sai lệch của GenAI được loại bỏ hoàn toàn bằng bước xác nhận của bạn trước khi sinh và thực hiện truy vấn cơ sở dữ liệu.
               </p>
             </article>
-            <article class="feature-card">
-              <h3>Cross-Database Context</h3>
+            <article class="feature-card glass-panel hover-lift">
+              <div class="feature-icon">⚡</div>
+              <h3>Tauri Sidecar Sync</h3>
               <p>
-                Chọn nhiều database trên cùng một server MySQL để AI có thể suy luận
-                và truy vấn xuyên nguồn dữ liệu.
+                Bộ não Python (AI) gắn song song với thể xác Rust (Desktop Shell) trong cùng UI siêu mượt của React & Vite.
               </p>
             </article>
-            <article class="feature-card">
-              <h3>Session Memory</h3>
+            <article class="feature-card glass-panel hover-lift">
+              <div class="feature-icon">💾</div>
+              <h3>Memory Local</h3>
               <p>
-                Mỗi cuộc hội thoại được lưu lại kèm SQL, dữ liệu thô và cấu hình biểu đồ
-                để bạn quay lại đúng mạch làm việc trước đó.
+                State hội thoại và toàn bộ lịch sử được lưu trữ dưới dạng SQLite checkpoint trên đĩa SSD cá nhân, tự động phục hồi.
               </p>
             </article>
-            <article class="feature-card">
-              <h3>Visual Output</h3>
+            <article class="feature-card glass-panel hover-lift">
+              <div class="feature-icon">📊</div>
+              <h3>Data Visualizer</h3>
               <p>
-                Khi phù hợp, app tự sinh biểu đồ để biến kết quả truy vấn thành tín hiệu
-                dễ đọc hơn cho báo cáo và phân tích nhanh.
+                AI tự động thông dịch dữ liệu thô và xuất biểu đồ động cấu hình qua Plotly mà không cần chờ mở file Excel.
               </p>
             </article>
-            <article class="feature-card">
-              <h3>Desktop Native Packaging</h3>
+            <article class="feature-card glass-panel hover-lift">
+              <div class="feature-icon">🔗</div>
+              <h3>Cross-Database</h3>
               <p>
-                Gói sẵn cho Windows, macOS và Linux, không cần dựng backend riêng trong
-                luồng sử dụng cuối cùng.
+                Trạm điều khiển duy nhất cho nhiều Databases phân tán, cho phép query kết hợp ngay trong ngữ cảnh hội thoại mượt mà nhất.
               </p>
             </article>
           </div>
@@ -172,18 +181,17 @@
 
         <section class="downloads-section" id="downloads">
           <div class="section-heading">
-            <p class="eyebrow">Tải xuống</p>
-            <h2>Chọn đúng bản cài đặt cho từng phiên bản và nền tảng.</h2>
+            <p class="eyebrow">Truy Sức Mạnh Desktop</p>
+            <h2>Chọn đúng bản cài đặt tương thích cho nền tảng của bạn.</h2>
             <p class="section-note">
-              Mỗi phiên bản hiển thị đầy đủ 7 gói cài đặt thực tế từ GitHub Release. Bấm vào
-              từng mục để tải trực tiếp file tương ứng.
+              Không cần cài Python, không phụ thuộc trình duyệt lưới. Sẵn sàng hoạt động ngay sau khi giải nén qua CI/CD Pipeline.
             </p>
           </div>
 
-          <div class="release-banner" id="releaseBanner">
+          <div class="release-banner glass-panel" id="releaseBanner">
             <div>
-              <strong id="releaseVersion">Đang đồng bộ version mới nhất...</strong>
-              <p id="releaseMeta">Trang sẽ chỉ hiển thị 7 file của bản phát hành mới nhất.</p>
+              <strong id="releaseVersion">Đang đồng bộ luồng ánh sáng...</strong>
+              <p id="releaseMeta">Tự động tải xuống 7 tệp nhị phân release mới nhất.</p>
             </div>
             <a
               class="inline-link"
@@ -192,7 +200,7 @@
               target="_blank"
               rel="noreferrer"
             >
-              Xem tất cả release
+              <span>Xem nhật ký biến đổi (Changelog)</span>
             </a>
           </div>
 
@@ -201,30 +209,30 @@
 
         <section class="flow-section" id="flow">
           <div class="section-heading">
-            <p class="eyebrow">Cách hoạt động</p>
-            <h2>Một pipeline gọn, rõ và có kiểm soát.</h2>
+            <p class="eyebrow">Quy Trình Xử Lý</p>
+            <h2>Gọn Gàng. Tốc Độ. Có Thể Dự Đoán Bằng Mắt.</h2>
           </div>
 
           <div class="flow-timeline">
-            <article>
-              <span>01</span>
-              <h3>Kết nối và chọn database</h3>
-              <p>Chọn một hoặc nhiều database MySQL làm ngữ cảnh phân tích.</p>
+            <article class="glass-panel">
+              <span class="glow-step">01</span>
+              <h3>Nạp Ngữ Cảnh</h3>
+              <p>Duyệt qua Server lưu trữ nội bộ MySQL để AI tự động parse các tables.</p>
             </article>
-            <article>
-              <span>02</span>
-              <h3>AI đọc schema</h3>
-              <p>Hệ thống lấy schema liên quan để giảm đoán mò khi sinh truy vấn.</p>
+            <article class="glass-panel">
+              <span class="glow-step">02</span>
+              <h3>Phân Loại Tư Duy</h3>
+              <p>Agent thu gọn Schema JSON, phác thảo tư duy và sinh mã SQL siêu nhanh.</p>
             </article>
-            <article>
-              <span>03</span>
-              <h3>Duyệt kế hoạch</h3>
-              <p>Người dùng xem plan và có thể điều chỉnh trước khi chuyển sang SQL.</p>
+            <article class="glass-panel">
+              <span class="glow-step">03</span>
+              <h3>Bảo Vệ Hành Động</h3>
+              <p>Duyệt mã SQL ở cấp độ Code-Review trước đưa vào Interpreter.</p>
             </article>
-            <article>
-              <span>04</span>
-              <h3>Nhận kết quả và biểu đồ</h3>
-              <p>App trả về answer, SQL, dữ liệu thô và trực quan hóa nếu phù hợp.</p>
+            <article class="glass-panel">
+              <span class="glow-step">04</span>
+              <h3>Kết Xuất Sáng Tạo</h3>
+              <p>Dữ liệu trải ra bảng (DataGrid) + Chart phân khúc.</p>
             </article>
           </div>
         </section>
